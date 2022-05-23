@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>注册事件</title>
+</head>
+
+<body>
+    <button>传统注册事件</button>
+    <button>方法监听注册事件</button>
+    <button>attachEvent</button>
+    <script>
+        //  传统注册方式
+        //  var btns = document.querySelectorAll('button');
+        //  btns[0].onclick = function () {
+        //      alert('hi');
+        //  }
+        //  btns[0].onclick = function () {
+        //      alert('how are u');
+        //  }
+        //  方法监听事件
+        //  addEventListener  括号里面的不用加 on
+        var btns = document.querySelectorAll('button');
+        btns[1].addEventListener('click', function () {
+            alert('222');
+        })
+        btns[1].addEventListener('click', function () {
+            alert('第二次弹出的');
+        })
+        //  i9以前的版本支持
+        btns[2].attchEvent('onclick', function () {
+            alert('333');
+        })
+    </script>
+</body>
+
+</html>

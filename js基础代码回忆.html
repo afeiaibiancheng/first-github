@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>代码回忆</title>
+    <script>
+        //1.打印n行n列星星
+        //  var str = '';
+        //  var clos = prompt('请输入打印的列数');
+        //  var rows = prompt('请输入打印的列数');
+        //  for (var i = 1; i <= rows; i++) {
+        //      for (var j = 1; j <= clos; j++) {
+        //          str += '⭐';
+        //      }
+        //      str += '\n';
+        //  }
+        //  console.log(str);
+        //2.打印倒三角形
+        //  var str = '';
+        //  for (var i = 1; i <= 9; i++) {
+        //      for (var j = i; j <= 9; j++) {
+        //          str += '⭐';
+        //      }
+        //      str += '\n';
+        //  }
+        //  console.log(str);
+        //3.打印九九乘法表
+        //  var str = '';
+        //  for (var i = 1; i <= 9; i++) {
+        //      for (var j = 1; j <= i; j++) {
+        //          str += j + 'x' + i + '=' + i * j + '\t';
+        //      } str += '\n';
+        //  }
+        //  console.log(str);
+        //4.获取当前年月日时分秒
+        //  var date = new Date();
+        //  var year = date.getFullYear();
+        //  var month = date.getMonth() + 1;
+        //  var date1 = date.getDate();
+        //  var day = date.getDay();
+        //  var arr = ['星期日', '星期一', '星期二', '星期三', '星期四', '星期五', '星期六'];
+        //  var h = date.getHours();
+        //  h = h < 10 ? '0' + h : h;
+        //  var m = date.getMinutes();
+        //  m = m < 10 ? '0' + m : m;
+        //  var s = date.getSeconds();
+        //  s = s < 10 ? '0' + s : s;
+        //  console.log('今天是' + year + '年' + month + '月' + date1 + '日' + '\t' + arr[day] + '\n' + '现在是' + h + '点' + m + '分' + s + '秒');
+        //5.倒计时案例
+        //  function countDown(time) {
+        //      var nowTime = +new Date();
+        //      var inputTime = +new Date(time);
+        //      var times = (inputTime - nowTime) / 1000;
+        //      var d = parseInt(times / 60 / 60 / 24);
+        //      d = d < 10 ? '0' + d : d
+        //      var h = parseInt(times / 60 / 60 % 24);
+        //      h = h < 10 ? '0' + h : h;
+        //      var m = parseInt(times / 60 % 60);
+        //      m = m < 10 ? '0' + m : m;
+        //      var s = parseInt(times % 60);
+        //      s = s < 10 ? '0' + s : s;
+        //      return d + '天' + h + '时' + m + '分' + s + '秒';
+        //  }
+        //  console.log('距离2022年4月6日上午9点还有：' + countDown('2022-4-6 9:0:0'));
+        //6.求平均成绩案例
+        //  var num = prompt('请输入班级总人数');
+        //  var average = 0;
+        //  var sum = 0;
+        //  for (var i = 1; i <= num; i++) {
+        //      var score = prompt('请输入第' + i + '个学生的成绩');
+        //      sum += parseInt(score);
+        //  }
+        //  average = sum / num;
+        //  console.log('班级的平均分是 ：' + sum + '\n' + '班级的平均分数是：' + average);
+        //7.求自然数的累加和
+        //  var sum = 0;
+        //  for (var i = 1; i <= 100; i++) {
+        //      sum += i;
+        //  }
+        //  console.log(sum);
+        //8.求奇数和与偶数和
+        //  var odd = 0;
+        //  var even = 0;
+        //  for (var i = 1; i <= 100; i++) {
+        //      if (i % 2 == 0) {
+        //          even += i;
+        //      } else {
+        //          odd += i;
+        //      }
+        //  }
+        //  console.log('奇数和是：' + odd + '\n' + '偶数和是：' + even);
+        //9.1~500之间可以被3整除的数字之和是
+        //  var sum = 0;
+        //  for (var i = 1; i <= 500; i++) {
+        //      if (i % 3 == 0) {
+        //          sum += i;
+        //      }
+        //  }
+        //  console.log('1~500之间可以被3整除的数字之和是:' + sum);
+        //10.判断闰年案例
+        //  var year = prompt('请输入一个年份');
+        //  if (year % 4 == 0 || year % 100 !== 0 && year % 400 == 0) {
+        //      alert(year + '年是闰年');
+        //  } else {
+        //      alert(year + '年是平年');
+        //  }
+        //11.翻转数组(检测是否为数组)
+        //  function reverse(arr) {
+        //      if (arr instanceof Array) {
+        //          var newArr = [];
+        //          for (var i = arr.length - 1; i >= 0; i--) {
+        //              newArr[newArr.length] = arr[i];
+        //          }
+        //          return newArr;
+        //      }
+        //      else {
+        //          return 'error 这个参数的要求是数组格式 [1,2,3]';
+        //      }
+        //  }
+        //  console.log(reverse([1, 2, 3, 4, 5]));
+        //  console.log(reverse(1, 2, 3));
+        //11.1  reverse()
+        //  var arr = ['pink', 'green', 'yellow', 'red'];
+        //  arr.reverse();
+        //  console.log(arr);
+        //11.2   sort()冒泡排序
+        //  var arr = [13, 4, 7, 77, 1];
+        //  arr.sort(function (a, b) {
+        //      return a - b;//a-b是升序排列   b-a是降序排列
+        //  });
+        //  console.log(arr);
+        //11.3 instanceof
+        //  var arr = [];
+        //  var obj = {};
+        //  console.log(obj instanceof Array);
+        //  console.log(arr instanceof Array);
+        //11.4 Array.isArray();
+        //  console.log(Array.isArray(arr));
+        //  console.log(Array.isArray(obj));
+        //12.添加删除数组元素
+        //12.1 push()  在数组末尾添加数组元素
+        //  var arr = [1, 2, 3, 4];
+        //  arr.push(5, 'pink');
+        //  console.log(arr.push(5, 'pink'));
+        //  console.log(arr);
+        //  push 的返回值是  新数组的长度  6
+        //12.2 unshift  在数组开头添加数组元素
+        //  arr.unshift('red', 0);
+        //  console.log(arr.unshift('red', 0));
+        //  console.log(arr);
+        //  unshift 的返回值是  新数组的长度  8
+        //12.3 pop()  删除数组最后一个元素
+        //  arr.pop();
+        //  console.log(arr);
+        //  console.log(arr.pop());//pop 的返回值是被删除的元素
+        //12.4 shift  删除数组第一个元素
+        //  console.log(arr.shift());//pop 的返回值是被删除的元素
+        //  console.log(arr);
+        //13.删选数组
+        //  var arr = [1002, 63, 5222, 2220, 356, 2233];
+        //  var newArr = [];
+        //  for (var i = 0; i < arr.length; i++) {
+        //      if (arr[i] < 2000) {
+        //          //  newArr[newArr.length] = arr[i];
+        //          newArr.push(arr[i]);
+        //      }
+        //  }
+        //  console.log(newArr);
+        //14.获取数组元素索引  indexOf()     lastIndexOf()
+        //  var arr = ['red', 'green', 'pink', 'blue', 'blue'];
+        //  console.log(arr.indexOf('blue'));//只返回第一个满足条件的索引号
+        //  console.log(arr.indexOf('yellow'));// 如果数组没有该元素，则返回-1  
+        //  console.log(arr.lastIndexOf('yellow'));//  -1
+        //  console.log(arr.lastIndexOf('blue'));//  4
+        //14.1   数组去重案例
+        //  function unique(arr) {
+        //      var newArr = [];
+        //      for (var i = 0; i < arr.length; i++) {
+        //          if (newArr.indexOf(arr[i]) == -1) {
+        //              newArr.push(arr[i]);
+        //          }
+        //      }
+        //      return newArr;
+        //  }
+        //  var demo = unique(['a', 'c', 'b', 'a', 'c', 'a', 'd', 'c', 'c']);
+        //  console.log(demo);
+        //14.2  将数组转为字符串 join()  toString()
+        //  var arr = [1, 2, 3, 45, 6,];
+        //  console.log(arr.toString());
+        //  var arr1 = ['pink', 'green', 'yellow', 'red'];
+        //  console.log(arr1.join('||&&'));
+        //15.字符串对象
+        //15.1   根据字符返回位置  str.indexOf('要查找的字符',[起始的位置])
+        //  var str = '改革春风吹满地,春天来了';
+        //  console.log(str.indexOf('春'));
+        //  console.log(str.indexOf('春', 3));
+        //  案例   统计某个字符出现的位置以及次数
+        //  var str = 'abcoefoxyozzopp';
+        //  var index = str.indexOf('o');
+        //  var num = 0;
+        //  console.log(index);
+        //  while (index !== -1) {
+        //      console.log(index);
+        //      num++;
+        //      index = str.indexOf('o', index + 1)
+        //  }
+        //  console.log('o出现的次数是：' + num);
+        //15.2    根据位置返回字符
+        //15.2.1    charAt(index)    char[index]
+        //  var str = 'andy';
+        //  console.log(str.charAt(3));
+        //   遍历所有字符   charAt(index)
+        //  for (var i = 0; i < str.length; i++) {
+        //      console.log(str.charAt(i));
+        //  }
+        //15.2.2   charCodeAt(index)  返回ascci码   判断用户按键
+        //  console.log(str.charCodeAt(0));
+        //15.2案例  统计出现次数最多的字符
+        //  var str = 'abcoefoxyozzopp';
+        //  var o = {};
+        //  for (var i = 0; i < str.length; i++) {
+        //      var chars = str.charAt(i);
+        //      if (o[chars]) {
+        //          o[chars]++;
+        //      } else {
+        //          o[chars] = 1;
+        //      }
+        //  }
+        //  console.log(o);
+        //  var max = 0;
+        //  var ch = '';
+        //  for (var k in o) {
+        //      if (o[k] > max) {
+        //          max = o[k];
+        //          ch = k;
+        //      }
+        //  }
+        //  console.log(max);
+        //  console.log('最多的字符是' + ch);
+        //15.3   字符串的操作方法
+        //  var str = 'andy';
+        //  console.log(str.concat('red'));//拼接字符串
+        //15.3.1   截取字符串   substr
+        //  var str1 = '改革春风吹满地';
+        //  console.log(str1.substr(2, 2));
+        //15.3.4     replace   替换字符串  只会替换第一个字符
+        //  console.log(str1.replace('春', '夏'));
+        // 案例   把字符串abcoefoxyozzopp所有的o替换成*
+        //  var str2 = 'abcoefoxyozzopp';
+        //  while (str2.indexOf('o') !== -1) {
+        //      str2 = str2.replace('o', '*');
+        //  }
+        //  console.log(str2);
+        //15.3.5   split   字符串转换为数组
+        var str = 'red,pink,green';
+        console.log(str.split(','));
+        var str = 'red*pink*green*yellow';
+        console.log(str.split('*'));
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

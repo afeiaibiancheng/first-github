@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>获取元素</title>
+</head>
+
+<body>
+    <!-- <div id="time">2022-5-7</div> -->
+    <!-- <ul> -->
+    <!-- <li>我是第1个li</li> -->
+    <!-- <li>我是第2个li</li> -->
+    <!-- <li>我是第3个li</li> -->
+    <!-- <li>我是第4个li</li> -->
+    <!-- <li>我是第5个li</li> -->
+    <!-- <li>我是第6个li</li> -->
+    <!-- </ul> -->
+    <!-- <ul id="nav"> -->
+    <!-- <li> 我是ul -- li</li> -->
+    <!-- <li> 我是ul -- li</li> -->
+    <!-- <li> 我是ul -- li</li> -->
+    <!-- <li> 我是ul -- li</li> -->
+    <!-- <li> 我是ul -- li</li> -->
+    <!-- <li> 我是ul -- li</li> -->
+    <!-- </ul> -->
+    <div class="box">盒子</div>
+    <div class="box">盒子</div>
+    <div id="nav">
+        <ul>
+            <li>首页</li>
+            <li>产品</li>
+        </ul>
+    </div>
+    <script>
+        //  1. getElementById()
+        //  var timer = document.getElementById('time');
+        //  console.log(timer);
+        //  console.log(typeof timer);
+        //  console.dir(timer);
+        //  2. getElementByTagName()
+        //  var lis = document.getElementsByTagName('li');
+        //  console.log(lis);//  获取到的是元素对象的集合   以伪数组形式存储
+        //  console.log(lis[0]);
+        //  2.遍历对象
+        //  for (var i = 0; i < lis.length; i++) {
+        //      console.log(lis[i]);
+        //  }
+        //  3.element.getElementByTagName()  可以得到这个元素里面的某些标签
+        //  var nav = document.getElementById('nav');
+        //  var navLis = nav.getElementsByTagName('li');
+        //  console.log(navLis);
+        //  4.根据类名获得元素    getElementsByClassName()
+        //  var boxs = document.getElementsByClassName('box');
+        //  console.log(boxs);
+        //  5.querySelector()
+        //  var firstBox = document.querySelector('.box');
+        //  console.log(firstBox);
+        //  var nav = document.querySelector('#nav');
+        //  console.log(nav);
+        //  var li = document.querySelector('li');
+        //  console.log(li);
+        //  5.querySelectorAll()
+        var allBox = document.querySelectorAll('.box');
+        console.log(allBox);
+        var lis = document.querySelectorAll('li');
+        console.log(lis);
+    </script>
+</body>
+
+</html>

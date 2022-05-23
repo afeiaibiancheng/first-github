@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script>
+        //   window.onload = function () {
+        //       var btn = document.querySelector('button');
+        //       btn.addEventListener('click', function () {
+        //           alert('被点击了');
+        //       })
+        //   }
+        window.addEventListener('load', function () {
+            var btn = document.querySelector('button');
+            btn.addEventListener('click', function () {
+                alert('被点击了');
+            })
+        })
+        //  load等页面全部加载完毕    包含页面dom元素    图片    flash    css等
+        //  DOMContentLoad 是DOM 加载完毕，就可以执行   加载速度快于load
+        window.addEventListener('load', function () {
+            alert('2222');
+        })
+        document.addEventListener('DOMContentLoaded', function () {
+            alert('3333');
+        })
+    </script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>窗口加载事件</title>
+</head>
+
+<body>
+    <button>按钮</button>
+
+</body>
+
+</html>

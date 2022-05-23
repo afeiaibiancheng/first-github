@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //  1.根据字符返回位置  str.indexOf('要查找的字符',[起始的位置]);
+        //  var str = '改革春风吹满地,春天来了';
+        //  console.log(str.indexOf('春'));
+        //  console.log(str.indexOf('春', 3));  从索引号为3 的位置往后查找
+        //  2.案例--根据字符返回位置    统计字符串  'abcoefoxyozzopp'中所有o出现的位置以及次数
+        //  首先查找到第一个o出现的位置，只有indexOf不是-1，就继续查找
+        //  因为indexOf只能找到第一个，所有后面的查找都是在当前的位置 +1
+        //  var str = 'abcoefoxyozzopp';
+        //  var index = str.indexOf('o');
+        //  var num = 0;
+        //  console.log(index);
+        //  while (index !== -1) {
+        //      console.log(index);
+        //      num++;
+        //      index = str.indexOf('o', index + 1);
+        //  }
+        //  console.log('o出现的次数为：' + num);
+        //  3.根据位置返回字符  
+        //  3.1  charAt(index)  根据位置返回字符
+        //  var str = 'andy';
+        //  console.log(str.charAt(3));
+        //  3.1.1  遍历所有的字符
+        //  for (var i = 0; i < str.length; i++) {
+        //      console.log(str.charAt(i));
+        //  }
+        //  3.2  charCodeAt(index)  根据位置返回字符的ASCII值   用来判断用户按下的键
+        //  console.log(str.charCodeAt(0));
+        //  3.2  str[index]  
+        //  console.log(str[0]);
+        //  4.案例--根据位置返回字符   统计字符串  'abcoefoxyozzopp'中出现次数最多的字符并统计其次数
+        var str = 'abcoefoxyozzopp';
+        var o = {};
+        for (var i = 0; i < str.length; i++) {
+            var chars = str.charAt(i);  //  chars是遍历出的每一个字符
+            if (o[chars]) {
+                o[chars]++;
+            } else {
+                o[chars] = 1;
+            }
+        }
+        console.log(o);
+        //  遍历对象
+        var max = 0;
+        var ch = '';
+        for (var k in o) {
+            //  k  得到的是属性名
+            //  o[k]  得到的是属性值
+            if (o[k] > max) {
+                max = o[k];
+                ch = k;
+            }
+        }
+        console.log('出现次数最多的字符是：' + ch, '出现次数最多的字符的出现了：' + max + '次');
+    </script>
+</body>
+
+</html>

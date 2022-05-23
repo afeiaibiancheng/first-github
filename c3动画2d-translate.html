@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transform</title>
+    <style>
+        /* 移动盒子的位置：  定位    margin   2D转换
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            transform: translate(x,y);   transform: translateX();    transform: translateY();
+            transform: translate(100px, 100px) 
+        }  */
+        div {
+            position: relative;
+            width: 500px;
+            height: 500px;
+            background-color: pink;
+        }
+
+        p {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            top: 50%;
+            left: 50%;
+            background-color: purple;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <p></p>
+    </div>
+</body>
+
+</html>

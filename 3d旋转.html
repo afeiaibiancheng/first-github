@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            perspective: 500px;
+        }
+
+        img {
+            display: block;
+            width: 300px;
+            height: 400px;
+            margin: 100px auto;
+            transition: all 0.3s;
+        }
+
+        img:hover {
+            /* transform: rotateX(360deg); */
+            /* transform: rotateY(360deg); */
+            /* transform: rotateZ(360deg); */
+            /* 综合写法 */
+            transform: rotate3d(1, 0, 0, -45deg);
+        }
+    </style>
+</head>
+
+<body>
+    <img src="images/6.jpg" alt="">
+</body>
+
+</html>

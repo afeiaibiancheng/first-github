@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    手机号码： <input type="number"> <button>发送</button>
+    <script>
+        //1.按钮点击之后，会将按钮禁用   btn.disabled = true;
+        //2.同时按钮里面的内容会发生变化    button里面的内容通过innerhtml改变
+        //3.里面的秒数需要不断变化   需要用到定时器
+        //4.定义一个变量   在计时器里面不断递减
+        //5.如果变量为0，说明时间到了。需要清除定时器，并将按钮的内容恢复初始状态
+        var btn = document.querySelector('button');
+        var time = 3;
+        btn.addEventListener('click', function () {
+            btn.disabled = true;
+            var timer = setInterval(function () {
+                if (time == 0) {
+                    //清除定时器并复原按钮
+                    clearInterval(timer);
+                    btn.disabled = false;
+                    btn.innerHTML = '发送';
+                    time = 3;
+                } else {
+                    btn.innerHTML = '还剩下' + time + '秒';
+                    time--;
+                }
+            }, 1000);
+
+        })
+    </script>
+</body>
+
+</html>

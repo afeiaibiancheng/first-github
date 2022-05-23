@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>node.nextSibling</title>
+</head>
+
+<body>
+    <div>我是div</div>
+    <span>我是span</span>
+    <script>
+        var div = document.querySelector('div');
+        //   nextSibling获取的是下一个兄弟节点  包含元素节点   文本节点
+        console.log(div.nextSibling);
+        //   previousSibling获取的是上一个兄弟节点  包含元素节点   文本节点
+        console.log(div.previousSibling);
+        //   nextElementSibling获取的是下一个兄弟元素节点
+        console.log(div.nextElementSibling);
+        //   previousElementSibling获取的是上一个兄弟元素节点   找不到返回空
+        console.log(div.previousElementSibling);
+    </script>
+</body>
+
+</html>

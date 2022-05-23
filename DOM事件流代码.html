@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .father {
+            position: relative;
+            width: 300px;
+            height: 300px;
+            background-color: pink;
+            margin: 100px auto;
+        }
+
+        .son {
+            position: absolute;
+            right: 100px;
+            top: 100px;
+            text-align: center;
+            line-height: 100px;
+            color: #fff;
+            width: 100px;
+            height: 100px;
+            background-color: purple;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="father">
+        <div class="son">son盒子</div>
+    </div>
+    <script>
+        var son = document.querySelector('.son');
+        //   第三个参数如果是true    则处于捕获阶段
+        //  son.addEventListener('click', function () {
+        //      alert('son');
+        //  }, true);
+        //  var father = document.querySelector('.father');
+        //  father.addEventListener('click', function () {
+        //      alert('father');
+        //  }, true);
+        //   第三个参数如果是false 或者为空    则处于冒泡阶段
+        //  阻止冒泡  stopPropagation
+        son.addEventListener('click', function (e) {
+            alert('son');
+            e.stopPropagation();
+            e.cancelBubble = true;
+        }, false);
+        var father = document.querySelector('.father');
+        father.addEventListener('click', function (e) {
+            alert('father');
+            e.stopPropagation();
+        }, false);
+        document.addEventListener('click', function () {
+            alert('document');
+        })
+    </script>
+</body>
+
+</html>

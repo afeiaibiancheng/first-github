@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ol>
+        <li>我是ol里面的小li</li>
+        <li>我是ol里面的小li</li>
+        <li>我是ol里面的小li</li>
+        <li>我是ol里面的小li</li>
+        <li>我是ol里面的小li</li>
+    </ol>
+    <ul>
+        <li>我是ul里面的小li</li>
+        <li>我是ul里面的小li</li>
+        <li>我是ul里面的小li</li>
+        <li>我是ul里面的小li</li>
+        <li>我是ul里面的小li</li>
+    </ul>
+    <script>
+        var ul = document.querySelector('ul');
+        var lis = document.querySelector('ul').querySelectorAll('li');
+        console.log(lis);
+        // 1.子节点  childNodes
+        console.log(ul.childNodes);  //得到的所有子节点   包括文本、元素等节点   通过NodeType筛选
+        console.log(ul.childNodes[0].nodeType);  //  文本节点为3
+        console.log(ul.childNodes[1].nodeType);  //  元素节点为1
+        //  for (var i = 0; i < ul.childNodes.length; i++) {
+        //      if (ul.childNodes[i].nodeType == 1) {
+        //          console.log(ul.childNodes[i]);
+        //      }
+        //  }
+        // 2. parent.children   获取所有的子元素节点
+        console.log(ul.children);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="demo" index="1" class="nav"></div>
+    <script>
+        //1.获取元素的属性值  getAttribute()
+        var div = document.querySelector('div');
+        console.log(div.id);
+        console.log(div.getAttribute('id'));
+        console.log(div.getAttribute('index'));
+        //2.设置元素的属性
+        div.id = 'test';
+        div.setAttribute('index', 2);
+        div.setAttribute('class', 'fotter')
+    </script>
+</body>
+
+</html>
